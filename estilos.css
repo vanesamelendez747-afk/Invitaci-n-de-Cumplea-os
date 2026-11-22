@@ -1,0 +1,214 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#82d9ff, #d8f5ff 55%, #a9df79);
+}
+
+.granja {
+    min-height: 100vh;
+    text-align: center;
+    padding: 35px 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sol {
+    position: absolute;
+    top: 20px;
+    right: 8%;
+    font-size: 65px;
+    animation: girar 12s linear infinite;
+}
+
+.nube {
+    position: absolute;
+    font-size: 65px;
+    opacity: .9;
+    animation: flotar 4s ease-in-out infinite;
+}
+
+.nube1 {
+    top: 50px;
+    left: 8%;
+}
+
+.nube2 {
+    top: 120px;
+    right: 12%;
+    animation-delay: 1s;
+}
+
+.letrero {
+    display: inline-block;
+    background: #fff4bd;
+    color: #568b38;
+    border: 4px solid white;
+    border-radius: 25px;
+    padding: 13px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 0 #d7b85d;
+    position: relative;
+    z-index: 2;
+}
+
+.granero {
+    font-size: 85px;
+    margin: 12px 0;
+    animation: aparecer 1s ease;
+}
+
+.invitacion {
+    color: #4d7934;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+h1 {
+    color: #e75c35;
+    font-size: clamp(42px, 8vw, 75px);
+    text-shadow: 3px 3px white;
+    margin: 15px 0;
+    animation: aparecer 1.5s ease;
+}
+
+.edad {
+    display: inline-block;
+    background: #ffca48;
+    color: #78451c;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    border: 3px solid white;
+}
+
+.animales {
+    margin: 30px auto 20px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.animales span {
+    display: inline-block;
+    font-size: 65px;
+    animation: saltar 2s infinite ease-in-out;
+}
+
+.animales span:nth-child(even) {
+    animation-delay: .5s;
+}
+
+.mensaje {
+    max-width: 480px;
+    margin: 15px auto;
+    font-size: 19px;
+    line-height: 1.6;
+    color: #385d31;
+    background: #ffffffd9;
+    border-radius: 25px;
+    padding: 18px;
+}
+
+button {
+    background: #ed7544;
+    color: white;
+    border: 4px solid white;
+    border-radius: 40px;
+    padding: 17px 30px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px 0;
+    box-shadow: 0 6px 0 #b94c2b;
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+button:disabled {
+    opacity: .8;
+    cursor: default;
+}
+
+.detalles {
+    background: #fffdf0;
+    max-width: 490px;
+    margin: 25px auto;
+    padding: 30px 20px;
+    border-radius: 30px;
+    border: 5px dashed #80b94e;
+    box-shadow: 0 8px 20px #0002;
+    animation: aparecer 1s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.detalles h2 {
+    color: #e36b3c;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.detalles p {
+    color: #4c6938;
+    font-size: 19px;
+    margin: 18px 0;
+}
+
+.animalesFinales {
+    font-size: 45px;
+    margin: 15px;
+}
+
+.despedida {
+    font-weight: bold;
+    color: #e36b3c !important;
+}
+
+.oculto {
+    display: none;
+}
+
+.pasto {
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes saltar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes girar {
+    to { transform: rotate(360deg); }
+}
